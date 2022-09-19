@@ -1,0 +1,64 @@
+html {
+    font-size: 16px;
+    font-family: 'Fredoka One', "Open Sans", sans-serif;
+    background-color: antiquewhite;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.container {
+    width: 70vw;
+    
+    margin: 0 auto;
+    /* background-color: aliceblue;
+    padding: 20px 20px;
+    border: 5px solid black; */
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+.therapist, .prompt {
+    height: 60vh;
+    /* background-color: aliceblue; */
+    padding: 20px 20px;
+    /* border: 5px solid black; */
+    margin: 5px;
+}
+
+.therapist {
+    /* flex-grow: 2; */
+    width: 60%;
+}
+
+.therapist img {
+    width: 100%;
+    height: 100%;
+}
+
+.prompt {
+    /* flex-grow: 1; */
+    width: 40%;
+    background-color: aliceblue;
+    border-radius: 25px;
+    border: 5px solid black;
+    text-align: center;
+    /* height: 40vh; */
+}
+.prompt p {
+    height: 80%;
+    font-size: 20px;
+}
+.prompt button {
+    height: 50px;
+    width: 150px;
+    /* background-color: black; */
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+/* put therapist image behind and overlay prompt ontop of image? */
+/* prompt box is only as big as words and button.. */
