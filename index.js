@@ -46,7 +46,6 @@ app.get('/', (req, res) => {
         const results = response.data.values
         answers = []
         count = 0
-        console.log(results[1][0])
         results.shift();
 
         results.forEach(function() {
