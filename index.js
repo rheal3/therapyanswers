@@ -46,8 +46,9 @@ app.get('/', (req, res) => {
         const results = response.data.values
         answers = []
         count = 0
-        results.shift();
+        results.shift(); // removes first value (category headers) from results
 
+        // adds prompt and category to dictionary object and pushes to answers array
         results.forEach(function() {
           const prompt = results[count][0]
           const category = results[count][1]
