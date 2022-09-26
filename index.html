@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Page Title</title>
+        <title>Therapy Answers</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="src/styles.css">
@@ -12,11 +12,28 @@
     </head>
     <body>
         <nav>
-            <a href="#">SERIOUS</a>
-            <a href="#">DISCLAIMER</a>
+            <a href="./serious.html">SERIOUS</a>
+            <!-- <a href="#" ><button id="openDisclaimer">DISCLAIMER</button></a> -->
+            <a href="#" id="openDisclaimer">DISCLAIMER</a>
         </nav>
 
         <h1>THERAPY ANSWERS</h1>
+
+        <!-- modal disclaimer -->
+        <div id="diclaimerModal" class="disclaimer">
+            <!-- modal disclaimer content -->
+            <div class="disclaimer-content">
+                <!-- <span class="close">X</span> -->
+                <p>Disclaimer:</p>
+                <p>We are here to rubber duck your therapy situation...</p>
+                <p>We are here to be something to talk to. We cannot guarantee that our answers will help you, but voicing your problems can help you think through them.</p> 
+                <p>If you feel uncomfortable talking out loud we recommend writing this out in your notes or thinking it through in your head. The process is what helps</p>
+                <p>If you would simply like prompts to help you while talking it through press this button...</p>
+                <p>Include something about we want you to get help if you need it and you should go to a valid source</p>
+                <p>This website does NOT replace a therapist.</p>
+                <button class="close">I UNDERSTAND</button>
+            </div>
+        </div>
 
         <div class="container">
             <!-- therapist prompt -->

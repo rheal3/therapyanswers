@@ -33,6 +33,45 @@ h1 {
 }
 
 
+/* modal disclaimer */
+.disclaimer {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.75)
+}
+.disclaimer-content {
+    background-color: aliceblue;
+    margin: 9% auto;
+    padding: 35px;
+    border: 5px solid #000;
+    border-radius: 25px;
+    width: 60%
+}
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    height: 46px;
+    margin: 13px 10px 25px 10px;
+    padding: 0px 15px;
+    border-radius: 15px;
+    border: 5px solid #000;
+    font-family: 'Fredoka One', "Open Sans", sans-serif;
+}
+.close:hover,
+.close:focus {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 /* container for therapist and prompt */
 .container {
     width: 70vw;
@@ -86,3 +125,8 @@ h1 {
 
 /* put therapist image behind and overlay prompt ontop of image? */
 /* prompt box is only as big as words and button.. */
+
+/* color options */
+/* yellow - #FAFAD7 */
+/* purple - #E0D7FA */
+/* blue - #D7EDFA */
