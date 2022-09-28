@@ -50,11 +50,13 @@ closeDisclaimer.onclick = function() {
 
 // CONTACT CODE //
 
+const secret = require("./secret.json")
+
 function sendEmail() {
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "therapyanswers@gmail.com",
-        Password : "secret-password",
+        Password : secret.elasticemail,
         To : 'therapyanswers@gmail.com',
         From : 'therapyanswers@gmail.com',
         Subject : document.getElementById("topic").value,
@@ -64,7 +66,7 @@ function sendEmail() {
                 topic: ${document.getElementById("topic").value} <br>
                 message: <br> ${document.getElementById("message").value}`
     }).then(
-        message => alert("Your message has been sent. \n Have a joyous day!")
+        message => alert("Your message has been sent. \nHave a joyous day!")
     );
 }
 
