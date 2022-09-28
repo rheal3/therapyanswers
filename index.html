@@ -7,8 +7,7 @@
         <link rel="stylesheet" href="src/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">    
     </head>
     <body>
         <nav>
@@ -19,7 +18,7 @@
         <h1>THERAPY ANSWERS</h1>
 
         <!-- disclaimer modal -->
-        <div id="diclaimerModal" class="disclaimer">
+        <div class="disclaimer">
             <div class="disclaimer-content">
                 <p>Disclaimer:</p>
                 <p>We are here to rubber duck your therapy situation...</p>
@@ -28,7 +27,7 @@
                 <p>If you would simply like prompts to help you while talking it through press this button...</p>
                 <p>Include something about we want you to get help if you need it and you should go to a valid source</p>
                 <p>This website does NOT replace a therapist.</p>
-                <button class="close">I UNDERSTAND</button>
+                <button class="close-disclaimer">I UNDERSTAND</button>
             </div>
         </div>
 
@@ -46,12 +45,27 @@
                 <!-- plant image -->
                 <img width="40%" src="src/images/2942_R0lVIEFOTiAyOTktNzQ copy.png">
             </div>
-
         </div>
+
+        <div class="contact">
+            <div class="form">
+                <form  onsubmit="sendEmail(); reset(); return false;"> 
+                    <span class="close-contact">X</span>
+                    <h3>get in touch</h3>
+                    <input type="text" id="name" name="name" placeholder="your name" required>
+                    <input type="email" id="email" name="email" placeholder="your email" required> 
+                    <input type="text" id="topic" name="topic" placeholder="topic" required>
+                    <textarea id="message" name="message" placeholder="type what you will, we shall read it!" rows="5" required></textarea>
+                    <button type="submit" onclick="sendEmail()" value="submit">send it forth!</button>
+                </form>
+            </div>
+        </div>
+
         <div class="footer">
-            <a href="#">contact</a>
+            <a href="#" id="openContact">contact</a>
         </div>
         
         <script src="src/app.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
     </body>
 </html>
