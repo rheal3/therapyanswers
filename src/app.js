@@ -1,3 +1,5 @@
+// import * as dotenv from 'dotenv';
+
 // DATABASE BACKEND CODE //
 
 const promptDisplay = document.querySelector('.prompt')
@@ -49,30 +51,29 @@ closeDisclaimer.onclick = function() {
 
 
 // CONTACT CODE //
-
-const secret = require("./secret.json")
-
-function sendEmail() {
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "therapyanswers@gmail.com",
-        Password : secret.elasticemail,
-        To : 'therapyanswers@gmail.com',
-        From : 'therapyanswers@gmail.com',
-        Subject : document.getElementById("topic").value,
-        Body : `
-                from: ${document.getElementById("name").value} <br>
-                email: ${document.getElementById("email").value} <br>
-                topic: ${document.getElementById("topic").value} <br>
-                message: <br> ${document.getElementById("message").value}`
-    }).then(
-        message => alert("Your message has been sent. \nHave a joyous day!")
-    );
-}
-
-const contactModal = document.getElementsByClassName("contact")[0]
+const contactModal = document.getElementsByClassName("contact")[0];
 const contactButton = document.getElementById("openContact");
 const closeContact = document.getElementsByClassName("close-contact")[0];
+
+// function sendEmail() {
+//     Email.send({
+//         Host : "smtp.elasticemail.com",
+//         Username : "therapyanswers@gmail.com",
+//         Password : UNAVAILABLE,
+//         To : 'therapyanswers@gmail.com',
+//         From : 'therapyanswers@gmail.com',
+//         Subject : document.getElementById("topic").value,
+//         Body : `
+//                 from: ${document.getElementById("name").value} <br>
+//                 email: ${document.getElementById("email").value} <br>
+//                 topic: ${document.getElementById("topic").value} <br>
+//                 message: <br> ${document.getElementById("message").value}`
+//     }).then(
+//         message => alert("Your message has been sent. \nHave a joyous day!")
+//     ).then(
+//         contactModal.style.display = "none"
+//     )
+// }
 
 // open contact modal
 contactButton.onclick = function() {
