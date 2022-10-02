@@ -10,7 +10,7 @@ fetch('http://localhost:8000/')
     .then(response => {return response.json()})
     .then(data => {
         answers = data
-        document.getElementById("answer").innerHTML = "What's up?"
+        document.getElementById("answer").innerHTML = "Think about a problem you're currently struggling with. <br/>Explain it to me.."
     })
     .catch(err => console.log(err))
 
