@@ -10,8 +10,9 @@ fetch('http://localhost:8000/')
     .then(response => {return response.json()})
     .then(data => {
         answers = data
-        let randomAnswer = data[Math.floor(Math.random()*data.length)].prompt
-        document.getElementById("answer").innerHTML = randomAnswer
+        // let randomAnswer = data[Math.floor(Math.random()*data.length)].prompt
+        // document.getElementById("answer").innerHTML = randomAnswer
+        document.getElementById("answer").innerHTML = "What's up?"
     })
     .catch(err => console.log(err))
 
