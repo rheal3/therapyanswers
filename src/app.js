@@ -4,6 +4,7 @@
 
 const promptDisplay = document.querySelector('.prompt')
 let answers = []
+let alt_answers = [{"prompt":"When was a time where you were scared, but things turned out okay?","category":"Prompt"},{"prompt":"When you are having a tough day, what do you do to cope and why does it help?","category":"Prompt"},{"prompt":"When you tell me you feel angry, what else do you feel? Disappointed, hurt, betrayed, lonely, or something else?","category":"Prompt"},{"prompt":"Where and when does this usually happen?","category":"Prompt"},{"prompt":"Where is your favorite place to travel and why?","category":"Prompt"},{"prompt":"Who are the most important people in your life and why?","category":"Prompt"},{"prompt":"Who is someone you look up to and why?","category":"Prompt"},{"prompt":"Who is your favorite person to talk to and why?","category":"Prompt"},{"prompt":"Why is your favorite color your favorite color?","category":"Prompt"},{"prompt":"Why is your favorite movie your favorite movie?","category":"Prompt"}]
 
 // database to front end startup
 fetch('http://localhost:8000/')
@@ -12,14 +13,17 @@ fetch('http://localhost:8000/')
         answers = data
         document.getElementById("answer").innerHTML = "Think about a problem you're currently struggling with. <br/>Explain it to me.."
     })
-    .catch(err => console.log(err))
+    .catch(err => {
+        answers = alt_answers
+        document.getElementById("answer").innerHTML = "Think about a problem you're currently struggling with. <br/>Explain it to me.."
+        console.log(err)
+    })
 
 
 // random answer from 'get prompt' button
 function getRandomAnswer() {
     newAnswer = answers[Math.floor(Math.random()*answers.length)].prompt
     document.getElementById("answer").innerHTML = newAnswer
-    console.log(document.getElementById("answer"))
 }
 
 
