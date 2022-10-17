@@ -32,11 +32,18 @@ function getRandomAnswer(type) {
 
 // const disclaimerModal = document.getElementById("disclaimerModal");
 const disclaimerModal = document.getElementsByClassName("disclaimer")[0];
-const discalimerButton = document.getElementById("openDisclaimer");
-const closeDisclaimer = document.getElementsByClassName("close-disclaimer")[0];
+const disclaimerButton = document.getElementById("openDisclaimer");
+const closeDisclaimer = document.getElementsByClassName("close-disclaimer")[1];
+const closeXDisclaimer = document.getElementsByClassName("close-x")[0];
+
+// HOW TO MODAL
+const howToModal = document.getElementsByClassName("how-to")[0];
+const howToButton = document.getElementById("openHowTo");
+const closeHowTo = document.getElementsByClassName("close-how-to")[0];
+const closeXHowTo = document.getElementsByClassName("close-x")[1];
 
 // open disclaimer modal
-discalimerButton.onclick = function() {
+disclaimerButton.onclick = function() {
     disclaimerModal.style.display = "block";
 }
 
@@ -46,10 +53,32 @@ window.onclick = function(event) {
         disclaimerModal.style.display = "none";
     }
 }
-
 closeDisclaimer.onclick = function() {
     disclaimerModal.style.display = "none";
+    howToModal.style.display = "block";
 }
+closeXDisclaimer.onclick = function() {
+    disclaimerModal.style.display = "none";
+}
+
+// open how to modal
+howToButton.onclick = function() {
+    howToModal.style.display = "block";
+}
+
+// close disclaimer modal
+window.onclick = function(event) {
+    if (event.target == howToModal) {
+        howToModal.style.display = "none";
+    }
+}
+closeHowTo.onclick = function() {
+    howToModal.style.display = "none";
+}
+closeXHowTo.onclick = function() {
+    howToModal.style.display = "none";
+}
+
 
 
 
@@ -92,3 +121,4 @@ window.onclick = function(event) {
 closeContact.onclick = function() {
     contactModal.style.display = "none";
 }
+
