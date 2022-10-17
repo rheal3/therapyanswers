@@ -20,8 +20,9 @@ fetch('http://localhost:8000/')
 
 
 // random answer from 'get prompt' button
-function getRandomAnswer() {
-    newAnswer = answers[Math.floor(Math.random()*answers.length)].prompt
+function getRandomAnswer(type) {
+    filter = answers.filter(x => x.category == type)
+    newAnswer = filter[Math.floor(Math.random()*filter.length)].prompt
     document.getElementById("answer").innerHTML = newAnswer
 }
 
